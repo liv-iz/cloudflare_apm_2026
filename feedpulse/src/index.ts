@@ -1,3 +1,5 @@
+import { getDashboardHtml } from "./dashboard";
+
 interface AnalysisResult {
   sentiment: string;
   theme: string;
@@ -75,21 +77,9 @@ export default {
     }
 
     if (url.pathname === "/" && request.method === "GET") {
-      return new Response(
-        `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FeedPulse</title>
-</head>
-<body>
-  <h1>FeedPulse</h1>
-  <p>Feedback intelligence dashboard — coming soon.</p>
-</body>
-</html>`,
-        { headers: { "Content-Type": "text/html" } }
-      );
+      return new Response(getDashboardHtml(), {
+        headers: { "Content-Type": "text/html" },
+      });
     }
 
     return new Response("Not found", { status: 404 });
