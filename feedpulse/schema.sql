@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS feedback;
+
+CREATE TABLE feedback (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  source TEXT NOT NULL,
+  raw_text TEXT NOT NULL,
+  sentiment TEXT NOT NULL,
+  theme TEXT NOT NULL,
+  summary TEXT NOT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
