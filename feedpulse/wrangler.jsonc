@@ -23,6 +23,12 @@
 			"database_name": "feedpulse-db",
 			"database_id": "09daa872-d7fb-4d0d-b1d4-2ac92ed637fa"
 		}
+	],
+	"kv_namespaces": [
+		{
+			"binding": "CACHE",
+			"id": "6bf9f3c104454bd3aec7b90459198e77"
+		}
 	]
 	/**
 	 * Smart Placement
